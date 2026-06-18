@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café Mokca — Torrevieja</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="style.css"/>
+  <!-- FUENTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  
+</head>
+
+<body>
+
+  <!-- ====== NAVEGACIÓN ====== -->
+  <nav>
+    <span class="nav-logo">Café El Rincón</span>  <!-- 🔧 CAMBIAR: nombre del café -->
+    <ul class="nav-links">
+      <li><a href="#sobre">Nosotros</a></li>
+      <li><a href="#menu">Carta</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- ====== HERO ====== -->
+  <header class="hero">
+    <!--
+      🔧 PARA PONER FOTO REAL:
+      1. Descarga la foto de Instagram
+      2. Guárdala como "hero.jpg" en la misma carpeta que este archivo
+      3. Reemplaza el div.hero-img por: <img class="hero-img" src="hero.jpg" alt="Interior del café" />
+    -->
+    <div class="hero-img"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Desde 2015 · Torrevieja</p>  <!-- 🔧 CAMBIAR: año y ciudad -->
+      <h1>El café<br/>que <em>mereces</em><br/>cada mañana</h1>  <!-- 🔧 CAMBIAR: eslogan -->
+      <p class="hero-desc">
+        Desayunos caseros, cafés de especialidad y un rincón tranquilo donde empezar bien el día.
+        <!-- 🔧 CAMBIAR: descripción breve del negocio -->
+      </p>
+      <a href="#contacto" class="btn btn-light">Ver horarios</a>
+    </div>
+  </header>
+
+
+  <!-- ====== SOBRE NOSOTROS ====== -->
+  <section>
+    <div id="sobre">
+      <div class="sobre-img-wrap">
+        <!--
+          🔧 FOTO 2 (interior o dueño):
+          <img src="sobre.jpg" alt="Interior del café" />
+        -->
+        <span>📸 foto interior</span>
+      </div>
+
+      <div class="sobre-text">
+        <p class="section-eyebrow">Nuestra historia</p>
+        <h2 class="section-title">Un lugar donde el café es lo primero</h2>
+        <p class="section-body">
+          Llevamos más de diez años sirviendo los mejores desayunos de Torrevieja.
+          Empezamos como un pequeño bar familiar y hoy somos el rincón favorito
+          del barrio para tomarse un momento, solos o en buena compañía.
+          <!-- 🔧 CAMBIAR: historia real del negocio -->
+        </p>
+        <p class="section-body" style="margin-top: 0.75rem;">
+          Usamos café de tueste artesanal y bollería horneada cada mañana.
+          Lo de siempre, bien hecho.
+          <!-- 🔧 CAMBIAR: propuesta de valor real -->
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====== MENÚ ====== -->
+  <section id="menu">
+    <div class="inner">
+      <p class="section-eyebrow" style="color: var(--color-accent);">Lo que ofrecemos</p>
+      <h2 class="section-title">Nuestra carta</h2>
+      <p class="section-body">Productos de siempre, con cariño y sin prisa.</p>
+
+      <div class="menu-grid">
+
+        <!-- 🔧 CAMBIAR: añade, quita o edita estos items según el negocio -->
+
+        <div class="menu-item">
+          <div class="menu-item-icon">☕</div>
+          <div class="menu-item-name">Café con leche</div>
+          <div class="menu-item-desc">Espresso doble con leche entera vaporizada al momento.</div>
+          <div class="menu-item-price">1,40 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-icon">🥐</div>
+          <div class="menu-item-name">Desayuno completo</div>
+          <div class="menu-item-desc">Tostada con tomate, zumo natural y café o infusión.</div>
+          <div class="menu-item-price">4,50 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-icon">🥪</div>
+          <div class="menu-item-name">Bocadillo del día</div>
+          <div class="menu-item-desc">Elaborado cada mañana con pan del horno de enfrente.</div>
+          <div class="menu-item-price">3,80 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-icon">🧃</div>
+          <div class="menu-item-name">Zumo natural</div>
+          <div class="menu-item-desc">Naranja o mandarina según temporada, exprimido al momento.</div>
+          <div class="menu-item-price">2,00 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-icon">🍰</div>
+          <div class="menu-item-name">Tarta del día</div>
+          <div class="menu-item-desc">Casera, cambia cada semana. Pregunta cuál hay hoy.</div>
+          <div class="menu-item-price">2,50 €</div>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-icon">🫖</div>
+          <div class="menu-item-name">Infusiones</div>
+          <div class="menu-item-desc">Manzanilla, menta poleo, té verde o rooibos.</div>
+          <div class="menu-item-price">1,60 €</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <div class="divider">· · ☕ · ·</div>
+
+
+  <!-- ====== GALERÍA ====== -->
+  <section>
+    <div id="galeria">
+      <div class="header">
+        <p class="section-eyebrow">Síguenos en Instagram</p>
+        <h2 class="section-title">Así somos por dentro</h2>
+      </div>
+
+      <div class="galeria-grid">
+        <!--
+          🔧 FOTOS INSTAGRAM: descarga 6 fotos y nómbralas foto1.jpg, foto2.jpg...
+          Reemplaza cada <div class="foto"> por:
+          <div class="foto"><img src="foto1.jpg" alt="..." /></div>
+        -->
+        <div class="foto"><span>📸 foto 1</span></div>
+        <div class="foto"><span>📸 foto 2</span></div>
+        <div class="foto"><span>📸 foto 3</span></div>
+        <div class="foto"><span>📸 foto 4</span></div>
+        <div class="foto"><span>📸 foto 5</span></div>
+        <div class="foto"><span>📸 foto 6</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====== HORARIO Y CONTACTO ====== -->
+  <section id="contacto">
+    <div class="inner">
+
+      <div>
+        <p class="section-eyebrow">Cuándo estamos</p>
+        <h2 class="section-title">Horario</h2>
+
+        <table class="horario-tabla">
+          <!-- 🔧 CAMBIAR: horarios reales -->
+          <tr class="horario-fila">
+            <td class="horario-dia">Lunes — Sábado</td>
+            <td class="horario-hora">8:00 – 21:00 </td>
+          </tr>
+          <tr class="horario-fila">
+            <td class="horario-dia">Domingo</td>
+            <td class="horario-hora cerrado">9:00 - 16:00</td>
+          </tr>
+        </table>
+      </div>
+
+      <div>
+        <p class="section-eyebrow">Dónde encontrarnos</p>
+        <h2 class="section-title">Contacto</h2>
+
+        <div class="contacto-datos">
+
+          <div class="contacto-fila">
+            <span class="contacto-icon">📍</span>
+            <div>
+              <div class="contacto-label">Dirección</div>
+              <!-- 🔧 CAMBIAR: dirección real -->
+              Calle Caballero de Rodas, 161, 03182 Torrevieja, Alicante
+            </div>
+          </div>
+
+          <div class="contacto-fila">
+            <span class="contacto-icon">📞</span>
+            <div>
+              <div class="contacto-label">Teléfono</div>
+              <!-- 🔧 CAMBIAR: teléfono real -->
+              <a href="tel:+34650563507">650 56 35 07</a>
+            </div>
+          </div>
+
+          <div class="contacto-fila">
+            <span class="contacto-icon">📷</span>
+            <div>
+              <div class="contacto-label">Instagram</div>
+              <!-- 🔧 CAMBIAR: usuario Instagram real -->
+              <a href="https://www.instagram.com/cafemokcatorrevieja/" target="_blank">@cafemokcatorrevieja</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 🔧 CAMBIAR: busca el negocio en Google Maps, pulsa Compartir > Insertar mapa
+             y pega aquí el código iframe que te dan -->
+        <div class="mapa-wrap">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d595.7257125350689!2d-0.6729078433513274!3d37.97844888126974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63ab0040b5c5ff%3A0x38a1d28b2713e33c!2sCaf%C3%A9%20MoKca!5e1!3m2!1ses!2ses!4v1781780592488!5m2!1ses!2ses" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    © 2025 Café Mokca · Torrevieja &nbsp;·&nbsp; Diseño web por <a href="#" style="opacity:0.8;">vkiter</a>
+    <!-- 🔧 CAMBIAR: nombre del café, año y tu nombre/marca -->
+  </footer>
+
+</body>
+</html>

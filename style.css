@@ -1,0 +1,450 @@
+
+/* =============================================
+    TOKENS DE DISEÑO — cambia aquí los colores
+============================================= */
+:root {
+    --color-bg:        #FAF8F5;
+    --color-dark:      #1A1410;
+    --color-accent:    #8B5E3C;
+    --color-cream:     #E8DDD0;
+    --color-muted:     #7A7068;
+    --font-display:    'Playfair Display', Georgia, serif;
+    --font-body:       'Inter', system-ui, sans-serif;
+}
+
+/* =============================================
+    RESET Y BASE
+============================================= */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-dark);
+    font-family: var(--font-body);
+    font-weight: 300;
+    line-height: 1.7;
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+img { display: block; width: 100%; object-fit: cover; }
+
+a { color: inherit; text-decoration: none; }
+
+/* =============================================
+    NAVEGACIÓN
+============================================= */
+nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 5%;
+    background: rgba(250, 248, 245, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--color-cream);
+}
+
+.nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--color-accent); }
+
+/* =============================================
+    HERO
+============================================= */
+.hero {
+    position: relative;
+    height: 100svh;
+    min-height: 560px;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 5% 5%;
+    overflow: hidden;
+}
+
+.hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    /* ⬇️ REEMPLAZA con tu foto real de Instagram */
+    background: linear-gradient(160deg, #c9a882 0%, #5c3a1e 100%);
+    filter: brightness(0.72);
+}
+
+/* Imagen real: descomenta y pon la ruta */
+/* .hero-img { background: none; } */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #FAF8F5;
+    max-width: 680px;
+}
+
+.hero-eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-cream);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 2rem;
+    height: 1px;
+    background: var(--color-cream);
+}
+
+.hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.hero h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--color-cream);
+}
+
+.hero-desc {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(250, 248, 245, 0.82);
+    max-width: 42ch;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid currentColor;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+}
+
+.btn-light {
+    color: #FAF8F5;
+    border-color: rgba(250,248,245,0.5);
+}
+
+.btn-light:hover {
+    background: #FAF8F5;
+    color: var(--color-dark);
+}
+
+/* =============================================
+    SEPARADOR DECORATIVO (firma del template)
+============================================= */
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    padding: 3.5rem 0 2rem;
+    color: var(--color-accent);
+    font-size: 1.1rem;
+    letter-spacing: 0.5rem;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    max-width: 120px;
+    height: 1px;
+    background: var(--color-cream);
+}
+
+/* =============================================
+    SECCIONES GENÉRICAS
+============================================= */
+section { padding: 5rem 5%; }
+
+.section-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.section-body {
+    color: var(--color-muted);
+    max-width: 55ch;
+    font-size: 0.97rem;
+}
+
+/* =============================================
+    SECCIÓN SOBRE NOSOTROS
+============================================= */
+#sobre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sobre-img-wrap {
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    background: var(--color-cream);
+    /* ⬇️ Placeholder hasta que pongas la foto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-muted);
+    font-size: 0.85rem;
+}
+
+.sobre-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sobre-text { padding: 1rem 0; }
+
+.sobre-text .section-body { margin-bottom: 2rem; }
+
+/* =============================================
+    MENÚ / ESPECIALIDADES
+============================================= */
+#menu {
+    background: var(--color-dark);
+    color: var(--color-bg);
+    max-width: 100%;
+}
+
+#menu .inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#menu .section-title { color: var(--color-bg); }
+
+#menu .section-body { color: var(--color-cream); margin-bottom: 3rem; }
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.menu-item {
+    padding: 2rem 1.75rem;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: background 0.2s;
+}
+
+.menu-item:hover { background: rgba(255,255,255,0.04); }
+
+.menu-item-icon {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.menu-item-name {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+    color: var(--color-bg);
+}
+
+.menu-item-desc {
+    font-size: 0.85rem;
+    color: var(--color-cream);
+    opacity: 0.7;
+    line-height: 1.5;
+}
+
+.menu-item-price {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+}
+
+/* =============================================
+    GALERÍA INSTAGRAM
+============================================= */
+#galeria { max-width: 1200px; margin: 0 auto; }
+
+#galeria .header { margin-bottom: 2.5rem; }
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+
+.galeria-grid .foto {
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: var(--color-cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-muted);
+    font-size: 0.8rem;
+}
+
+.galeria-grid .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.galeria-grid .foto:hover img { transform: scale(1.04); }
+
+/* =============================================
+    HORARIO Y CONTACTO
+============================================= */
+#contacto {
+    background: var(--color-cream);
+    padding: 5rem 5%;
+}
+
+#contacto .inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+}
+
+.horario-tabla { margin-top: 1.5rem; width: 100%; }
+
+.horario-fila {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    font-size: 0.9rem;
+}
+
+.horario-dia { font-weight: 400; }
+
+.horario-hora { color: var(--color-muted); }
+
+.cerrado { color: #c0392b; }
+
+.contacto-datos { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+
+.contacto-fila {
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-start;
+    font-size: 0.9rem;
+}
+
+.contacto-icon { font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+.contacto-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: 0.15rem;
+}
+
+/* =============================================
+    MAPA
+============================================= */
+.mapa-wrap {
+    margin-top: 2rem;
+    height: 220px;
+    overflow: hidden;
+    border: 1px solid var(--color-cream);
+}
+
+.mapa-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* =============================================
+    FOOTER
+============================================= */
+footer {
+    background: var(--color-dark);
+    color: var(--color-cream);
+    text-align: center;
+    padding: 2rem 5%;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* =============================================
+    RESPONSIVE MÓVIL
+============================================= */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+
+    #sobre {
+    grid-template-columns: 1fr;
+    }
+
+    .sobre-img-wrap { aspect-ratio: 3/2; order: -1; }
+
+    #contacto .inner {
+    grid-template-columns: 1fr;
+    }
+
+    .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
