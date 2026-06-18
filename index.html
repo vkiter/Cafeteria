@@ -6,46 +6,44 @@
   <title>Café Mokca — Torrevieja</title>
   <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   <link rel="stylesheet" href="style.css"/>
-  <!-- FUENTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-
-  
 </head>
 
 <body>
 
   <!-- ====== NAVEGACIÓN ====== -->
   <nav>
-    <span class="nav-logo">Café Mokca</span>  <!-- 🔧 CAMBIAR: nombre del café -->
-    <ul class="nav-links">
-      <li><a href="#sobre">Nosotros</a></li>
-      <li><a href="#menu">Carta</a></li>
-      <li><a href="#galeria">Galería</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+    <span class="nav-logo">Café Mokca</span>
+
+    <!-- Botón hamburguesa (solo visible en móvil) -->
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#sobre" class="nav-link">Nosotros</a></li>
+      <li><a href="#menu" class="nav-link">Carta</a></li>
+      <li><a href="#galeria" class="nav-link">Galería</a></li>
+      <li><a href="#contacto" class="nav-link">Contacto</a></li>
     </ul>
   </nav>
 
 
   <!-- ====== HERO ====== -->
   <header class="hero">
-    <!--
-      🔧 PARA PONER FOTO REAL:
-      1. Descarga la foto de Instagram
-      2. Guárdala como "hero.jpg" en la misma carpeta que este archivo
-      3. Reemplaza el div.hero-img por: <img class="hero-img" src="images/hero.jpg" alt="Interior del café" />
-    -->
     <div class="hero-img">
       <img class="hero-img" src="images/hero.jpg" alt="Interior del café" />
     </div>
 
     <div class="hero-content">
-      <p class="hero-eyebrow">Desde 2026 · Torrevieja</p>  <!-- 🔧 CAMBIAR: año y ciudad -->
-      <h1>El café<br/>que <em>mereces</em><br/>cada mañana</h1>  <!-- 🔧 CAMBIAR: eslogan -->
+      <p class="hero-eyebrow">Desde 2026 · Torrevieja</p>
+      <h1>El café<br/>que <em>mereces</em><br/>cada mañana</h1>
       <p class="hero-desc">
         Desayunos caseros, cafés de especialidad y un rincón tranquilo donde empezar bien el día.
-        <!-- 🔧 CAMBIAR: descripción breve del negocio -->
       </p>
       <a href="#contacto" class="btn btn-light">Ver horarios</a>
     </div>
@@ -56,10 +54,6 @@
   <section>
     <div id="sobre">
       <div class="sobre-img-wrap">
-        <!--
-          🔧 FOTO 2 (interior o dueño):
-          <img src="sobre.jpg" alt="Interior del café" />
-        -->
         <span><img src="images/sobre.jpg" alt="Interior del café" /></span>
       </div>
 
@@ -72,14 +66,12 @@
           cada mañana y no hay prisa por levantarse de la silla. De esos 
           lugares donde se viene solo a desconectar o en buena compañía 
           a alargar el rato.
-          <!-- 🔧 CAMBIAR: historia real del negocio -->
         </p>
         <p class="section-body" style="margin-top: 0.75rem;">
           Trabajamos con café de tueste artesanal y productos de proximidad 
           porque creemos que las cosas sencillas, cuando están bien hechas,
-           no necesitan más explicación. Pasa, pide lo de siempre y 
-           compruébalo tú mismo.
-          <!-- 🔧 CAMBIAR: propuesta de valor real -->
+          no necesitan más explicación. Pasa, pide lo de siempre y 
+          compruébalo tú mismo.
         </p>
       </div>
     </div>
@@ -94,9 +86,6 @@
       <p class="section-body">Productos de siempre, con cariño y sin prisa.</p>
 
       <div class="menu-grid">
-
-        <!-- 🔧 CAMBIAR: añade, quita o edita estos items según el negocio -->
-
         <div class="menu-item">
           <div class="menu-item-icon">☕</div>
           <div class="menu-item-name">Café con leche</div>
@@ -138,7 +127,6 @@
           <div class="menu-item-desc">Manzanilla, menta poleo, té verde o rooibos.</div>
           <div class="menu-item-price">1,60 €</div>
         </div>
-
       </div>
     </div>
   </section>
@@ -156,12 +144,7 @@
       </div>
 
       <div class="galeria-grid">
-        <!--
-          🔧 FOTOS INSTAGRAM: descarga 6 fotos y nómbralas foto1.jpg, foto2.jpg...
-          Reemplaza cada <div class="foto"> por:
-          <div class="foto"><img src="foto1.jpg" alt="..." /></div>
-        -->
-        <div class="foto"><img src="images/dentro1.jpg" alt="..." /></div>
+        <div class="foto"><img src="images/dentro1.jpg" alt="Interior del café" /></div>
         <div class="foto"><span>📸 foto 2</span></div>
         <div class="foto"><span>📸 foto 3</span></div>
         <div class="foto"><span>📸 foto 4</span></div>
@@ -181,14 +164,13 @@
         <h2 class="section-title">Horario</h2>
 
         <table class="horario-tabla">
-          <!-- 🔧 CAMBIAR: horarios reales -->
           <tr class="horario-fila">
             <td class="horario-dia">Lunes — Sábado</td>
-            <td class="horario-hora">8:00 – 21:00 </td>
+            <td class="horario-hora">8:00 – 21:00</td>
           </tr>
           <tr class="horario-fila">
             <td class="horario-dia">Domingo</td>
-            <td class="horario-hora cerrado">9:00 - 16:00</td>
+            <td class="horario-hora">9:00 – 16:00</td>
           </tr>
         </table>
       </div>
@@ -198,12 +180,10 @@
         <h2 class="section-title">Contacto</h2>
 
         <div class="contacto-datos">
-
           <div class="contacto-fila">
             <span class="contacto-icon">📍</span>
             <div>
               <div class="contacto-label">Dirección</div>
-              <!-- 🔧 CAMBIAR: dirección real -->
               Calle Caballero de Rodas, 161, 03182 Torrevieja, Alicante
             </div>
           </div>
@@ -212,7 +192,6 @@
             <span class="contacto-icon">📞</span>
             <div>
               <div class="contacto-label">Teléfono</div>
-              <!-- 🔧 CAMBIAR: teléfono real -->
               <a href="tel:+34650563507">650 56 35 07</a>
             </div>
           </div>
@@ -221,27 +200,19 @@
             <span class="contacto-icon">📷</span>
             <div>
               <div class="contacto-label">Instagram</div>
-              <!-- 🔧 CAMBIAR: usuario Instagram real -->
               <a href="https://www.instagram.com/cafemokcatorrevieja/" target="_blank">@cafemokcatorrevieja</a>
             </div>
           </div>
-
         </div>
 
-        <!-- 🔧 CAMBIAR: busca el negocio en Google Maps, pulsa Compartir > Insertar mapa
-             y pega aquí el código iframe que te dan -->
         <div class="mapa-wrap">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d595.7257125350689!2d-0.6729078433513274!3d37.97844888126974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63ab0040b5c5ff%3A0x38a1d28b2713e33c!2sCaf%C3%A9%20MoKca!5e1!3m2!1ses!2ses!4v1781780592488!5m2!1ses!2ses" 
-                width="600" 
-                height="450" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d595.7257125350689!2d-0.6729078433513274!3d37.97844888126974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd63ab0040b5c5ff%3A0x38a1d28b2713e33c!2sCaf%C3%A9%20MoKca!5e1!3m2!1ses!2ses!4v1781780592488!5m2!1ses!2ses" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
-
       </div>
     </div>
   </section>
@@ -250,8 +221,28 @@
   <!-- ====== FOOTER ====== -->
   <footer>
     © 2025 Café Mokca · Torrevieja &nbsp;·&nbsp; Diseño web por <a href="#" style="opacity:0.8;">vkiter</a>
-    <!-- 🔧 CAMBIAR: nombre del café, año y tu nombre/marca -->
   </footer>
+
+
+  <!-- ====== SCRIPT MENÚ MÓVIL ====== -->
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+
+    // Abrir/cerrar al pulsar hamburguesa
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      links.classList.toggle('open');
+    });
+
+    // Cerrar al pulsar cualquier enlace del menú
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('open');
+        links.classList.remove('open');
+      });
+    });
+  </script>
 
 </body>
 </html>
